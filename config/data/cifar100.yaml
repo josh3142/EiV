@@ -1,0 +1,8 @@
+name: cifar100
+path: "../../data"
+path_zeta_train: "data/train"
+path_zeta_test: "data/test"
+param:
+  dim: 32
+  n_channel: 3
+  n_class: 100

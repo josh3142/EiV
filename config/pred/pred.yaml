@@ -1,0 +1,47 @@
+defaults:
+  - model: mlp
+  - _self_
+
+checkpoint:
+  load:
+    pred: 
+      # path: "saved_models/pred/" # probably not needed
+      # name: "0mnist0001.pth.tar"
+      name_suffix: ".pth.tar"
+    diff: "saved_models/diff/cifar10_model.pth.tar"
+  save:
+    path: /checkpoints
+    save: True
+
+
+n_zeta:
+  train: 5
+  test: 5
+n_zeta_mean: False
+n_theta: 50
+
+dataset:
+  train: True
+
+timesteps:
+  train: 500
+  test:
+    start: 0
+    end: 501
+    step_size: 100
+  inference: "[30,60,90,120,150]"
+
+epoch:
+  start: 0
+  end: 10
+  frequ_to_save: 10000
+
+optim:
+  adam:
+    beta1: 0.9
+    beta2: 0.999
+    eps: 1e-8
+  lr: 4e-4 # note that init_lr is (lr * batch_size / 256) 
+  wd: 1e-4 # wd = lambda / N with lambda precision of prior Gaussian, N number of training samples
+  batch_size: 256
+  n_workers: 20

@@ -1,0 +1,28 @@
+defaults:
+  - data: mnist
+  - pred: pred
+  - diff: diff
+  - _self_
+
+diffusion:
+  betas: linear
+  timesteps: 1000
+
+device: "cuda:0"
+
+seed: 2
+
+plot:
+  interval: 1
+  cmap: "viridis"
+  extension: "pdf"
+
+
+inference:
+  n_img: 9
+  n_row: 3
+  n_col: 3
+
+hydra:
+  job:
+    chdir: False  

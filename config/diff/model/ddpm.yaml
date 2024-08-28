@@ -1,0 +1,12 @@
+name: ddpm
+param:
+  dim_mults: [1, 2, 2, 2]
+  nf: 128
+  n_res_block: 2
+  attn_resolutions: [16]
+  nonlinearity: swish
+  resamp_with_conv: True
+  conditional: True
+  sigma_min: 0.01
+  sigma_max: 50
+  dropout: 0.1

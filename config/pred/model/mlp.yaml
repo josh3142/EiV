@@ -1,0 +1,4 @@
+name: mlp
+param: 
+  p: 0.5
+  in_features: 1024

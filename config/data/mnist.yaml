@@ -1,0 +1,8 @@
+name: mnist
+path: "../../data"
+path_zeta_train: "data/train"
+path_zeta_test: "data/test"
+param:
+  dim: 32 # the image is resized to 32
+  n_channel: 1
+  n_class: 10

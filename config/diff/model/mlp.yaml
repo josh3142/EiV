@@ -1,0 +1,4 @@
+name: mlp
+param: 
+  timesteps: 1000
+  

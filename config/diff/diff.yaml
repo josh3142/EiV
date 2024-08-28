@@ -1,0 +1,31 @@
+defaults:
+  - model: unet
+  - _self_
+
+checkpoint:
+  load:
+    path: /checkpoints
+    name: /best_model.pth.tar
+  save:
+    path: /checkpoints
+    name: /best_model.pth.tar
+    save: True
+
+step:
+  start: 0
+  end: 800000
+  frequ_to_save: 100000
+
+optim:
+  adam:
+    beta1: 0.9
+    beta2: 0.999
+    eps: 1e-8
+  grad_clip: 1.
+  warmup: 5000 # increase lr linearly per optimization step
+  decay: 0.9999
+  loss: l2    
+  lr: 4e-4 # note that init_lr is (lr * batch_size / 256) 
+  batch_size: 128
+  n_workers: 8
+
