@@ -1,4 +1,4 @@
-name: EiV
+name: EiV2
 channels:
   - conda-forge
 dependencies:

@@ -2,7 +2,7 @@
 
 This repository is the official implementation of [Deep Errors-in-Variables using a Diffusion Model](). 
 
-This paper shows that training a classification network with the statistical model Errors-in-Variables leads to an improvement in accuracy. 
+This paper shows that training a classification network with the statistical model Errors-in-Variables leads to an improvement in accuracy and to better calibrated neural networks. 
 
 ## Requirements
 
@@ -73,13 +73,26 @@ to download `dataEiV.zip` that contains the data associated with 1. - 4.
 
 The folder structure is chosen such that the required data can be loaded by the scripts. 
 
-## Results
+## Results of the paper
 
 The statistical model EiV leads to a superior prediction performance compared to non-EiV and AIV training. $T$ is a measure of noisiness of the data. 
 
 ![prediction_cifar10](utils/n_zeta50inferenceEiV_cifar10_bnn.png)
 
 EiV leads to more accurate predictions compared the AIV and non-EiV if the noisiness of the images is taken into account.
+
+## Denoising capability of the Diffusion model
+
+
+Visualization of noisy and denoised examples from CIFAR10 at different noise levels $T$. The diffusion model is used to denoise the images. At each noise level $T$ , $x_T$ is the input for non-EiV and \$psi_T$ is used for EiV and AIV.
+![denoising_cifar10](utils/noise_lvls_visualized_cifar10.png)
+
+
+## Generating an MNIST image from standard Normal distribution
+
+The diffusion model can map samples from one distribution to another one. Here a sample from a standard Normal distribution is mapped to a sample of the MNIST-distribution. The following `gif` shows how the transformation is done step by step.
+
+![Generating 8 of MNIST](utils/GenMNIST.gif)
 
 ## Disclaimer
 
@@ -99,4 +112,5 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## References
 
-To be included
+If you find this work useful, you may want to cite our paper. 
+(To be included)
