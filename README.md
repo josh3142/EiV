@@ -84,7 +84,7 @@ EiV leads to more accurate predictions compared the AIV and non-EiV if the noisi
 ## Denoising capability of the Diffusion model
 
 
-Visualization of noisy and denoised examples from CIFAR10 at different noise levels $T$. The diffusion model is used to denoise the images. At each noise level $T$ , $x_T$ is the input for non-EiV and $\psi_T$ is used for EiV and AIV.
+Visualization of noisy and denoised examples from CIFAR10 at different noise levels $T$. The diffusion model is used to denoise the images. At each noise level $T$ , $x^T$ is the input for non-EiV and $\zeta^T$ is used for EiV and AIV.
 ![denoising_cifar10](utils/noise_lvls_visualized_cifar10.png)
 
 
